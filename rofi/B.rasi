@@ -1,11 +1,11 @@
 * {
     background:      rgba(0, 0, 0, 1);
-    background-alt: #304860;
+    background-alt: #383838ff;
     foreground:      #FFFFFFFF;
-    selected:        #E87090;
+    selected:        #FF0000;
     active:          #98C379FF;
     urgent:          #E06C75FF;
-    font:            "Hack 10";
+    font:            "Hack 11";
 }
 
 configuration {
@@ -51,8 +51,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      1px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
+    border-radius:               10px;
     cursor:                      "default";
     background-color:            @background-colour;
 }
@@ -62,7 +61,7 @@ mainbox {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "listview" ];
@@ -73,7 +72,7 @@ inputbar {
     margin:                      0px 0px 5px 0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
@@ -83,7 +82,7 @@ inputbar {
 prompt {
     padding:                     5px 10px;
     border:                      0px;
-    border-radius:               0%;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @border-colour;
     text-color:                  @background-colour;
@@ -99,7 +98,7 @@ textbox-prompt-colon {
 entry {
     padding:                     5px 10px;
     border:                      0px;
-    border-radius:               0px;
+    border-radius:               10px;
     background-color:            @background;
     text-color:                  @foreground-colour;
     cursor:                      text;
@@ -108,7 +107,7 @@ entry {
 }
 
 listview {
-    lines:                       15;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   true;
@@ -120,7 +119,7 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -128,9 +127,9 @@ listview {
 }
 
 scrollbar {
-    handle-width:                5px;
+    handle-width:                0px;
     handle-color:                @handle-colour;
-    border-radius:               0px;
+    border-radius:               10px;
     background-color:            @alternate-background;
 }
 
@@ -139,7 +138,7 @@ element {
     margin:                      0px;
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;

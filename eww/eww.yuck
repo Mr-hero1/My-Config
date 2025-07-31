@@ -1,20 +1,18 @@
 (defwidget clock []
-
-    ;; Time and date on the right
     (box :orientation "v"
       :halign "center"
-      :spacing -50
+      :spacing -150
       (label :text current_time
-        :y "100"
+        :y "0"
         :class "clock-label"
         :valign "end")
       (label :text data
-        :valign "center"
+        :valign "end"
         :class "date-label")))
 
 ;; Poll definitions must be outside the widget definition
 (defpoll current_time
-  :interval "5s"
+  :interval "50s"
   "date '+[%H:%M]'")
 
 (defpoll data
@@ -27,7 +25,7 @@
   :stacking "bg"
   :geometry (geometry
     :x "0"
-    :y "-25"
+    :y "-75"
     :width "250px"
     :height "200px"
     :anchor "top center")

@@ -2,16 +2,17 @@
     background:      rgba(0, 0, 0, 1);
     background-alt: #304860;
     foreground:      #FFFFFFFF;
-    selected:        #E87090;
+    selected:        #FF0000;
     active:          #98C379FF;
     urgent:          #E06C75FF;
-    font:            "Hack 10";
+    font:            "Hack 11";
 }
 
 /*****----- Configuration -----*****/
 configuration {
 	modi:                        "drun";
-    show-icons:                  false;
+    show-icons:                  true;
+    icon-theme:                 "Papirus";
     display-drun:                "[Apps]";
     display-run:                 "";
     display-filebrowser:         "";
@@ -49,16 +50,16 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
-    location:                    south;
+    location:                    0;
     anchor:                      north;
     fullscreen:                  false;
-    width:                       100%;
+    width:                       30%;
     x-offset:                    0px;
     y-offset:                    0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     cursor:                      "default";
     background-color:            @background-colour;
@@ -70,11 +71,11 @@ mainbox {
     margin:                      0px;
     padding:                     5px;
     border:                      0px solid;
-    border-radius:               0px; /* Simplified, assuming 0px 0px 0px 0px is just 0px */
+    border-radius:               10px; /* Simplified, assuming 0px 0px 0px 0px is just 0px */
     border-color:                @border-colour;
     background-color:            transparent;
-    children:                    [ "prompt", "entry", "listview" ];
-    orientation:                 horizontal;
+    children:                    [ "inputbar", "listview" ];
+    orientation:                 vertical;
 }
 
 /*****----- Inputbar -----*****/
@@ -83,17 +84,18 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
     children:                    [ "prompt", "entry" ];
+    orientation:                 horizontal;
 }
 
 prompt {
     padding:                     5px 10px;
     border:                      0px;
-    border-radius:               0%;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @border-colour;
     text-color:                  @background-colour;
@@ -108,7 +110,7 @@ entry {
     expand:                      false;
     padding:                     5px 10px;
     width:                       0px;
-    border-radius:               0%;
+    border-radius:               10px;
     background-color:            @background;
     text-color:                  @foreground-colour;
     cursor:                      text;
@@ -120,44 +122,43 @@ entry {
 
 /*****----- Listview -----*****/
 listview {
-    lines:                       100;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
-    layout:                      horizontal;
+    layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    spacing:                     5px;
-    margin:                      0px;
+    spacing:                     1px;
+    margin:                      1px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      "default";
 }
+
 scrollbar {
-    handle-width:                5px ;
+    handle-width:                5px;
     handle-color:                @handle-colour;
-    border-radius:               0px;
-    background-color:            @alternate-background;
+    border-radius:               10px;
+    background-color:            #ffffff;
 }
 
 /*****----- Elements -----*****/
 element {
-    spacing:                     0px;
+    spacing:                     10px;
     margin:                      0px;
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               0%;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      pointer;
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
 }
 element normal.normal {
     background-color:            var(normal-background);
@@ -216,7 +217,7 @@ mode-switcher{
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -224,7 +225,7 @@ mode-switcher{
 button {
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
@@ -240,7 +241,7 @@ message {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px; /* Simplified */
+    border-radius:               10px; /* Simplified */
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -248,7 +249,7 @@ message {
 textbox {
     padding:                     5px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -262,7 +263,7 @@ textbox {
 error-message {
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
