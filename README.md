@@ -1,4 +1,5 @@
 # 🐧 [Icy Rice]
+Personal dotfiles for Hyprland configuration.
 
 ## 📸 Screenshots
 <p align="center">
@@ -11,14 +12,15 @@
 </p>
 
 ## 🛠 Details
-| Component | Software |
-| --- | --- |
-| **OS** | EndeavourOS |
-| **WM / DE** | Hyprland |
-| **Terminal** | Foot |
-| **Shell** | fish |
-| **Bar** | Eww |
-| **Theme** | Catppuccin |
+| Component    | Software     |
+|--------------|--------------|
+| OS           | EndeavourOS  |
+| WM / DE      | Hyprland     |
+| Terminal     | Foot         |
+| Shell        | fish         |
+| Bar          | Eww          |
+| Theme        | Catppuccin   |
+
 
 ## 🚀 Here
 1. **Clone the repo:**
