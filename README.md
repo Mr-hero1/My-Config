@@ -1,21 +1,23 @@
-# 🐧 [Name of your Rice]
-> A brief, catchy description of the aesthetic (e.g., "A cozy, forest-themed Nord Rice").
+# 🐧 [Ice-day Rice]
 
 ## 📸 Screenshots
-(Preview/2025-12-31-151346_hyprshot.png)
-(Preview/2025-12-31-151622_hyprshot.png)
+![1](Preview/2025-12-31-151346_hyprshot.png)
+![2](Preview/2026-01-03_16:22:16.png)
+![3](Preview/2026-01-01-223632_hyprshot.png)
+![4](Preview/2025-12-31-151622_hyprshot.png)
 
 ## 🛠 Details
 | Component | Software |
 | --- | --- |
-| **OS** | Arch Linux / Fedora / Debian |
-| **WM / DE** | Hyprland / i3 / KDE |
-| **Terminal** | Kitty / Alacritty |
-| **Shell** | Zsh (with Oh My Zsh) |
-| **Bar** | Waybar / Polybar |
-| **Theme** | Catppuccin / Gruvbox |
+| **OS** | EndeavourOS |
+| **WM / DE** | Hyprland |
+| **Terminal** | Foot |
+| **Shell** | fish |
+| **Bar** | Eww |
+| **Theme** | Catppuccin |
 
 ## 🚀 Installation
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   git clone [https://github.com/Mr-hero1/My-Config.git](https://github.com/Mr-hero1/My-Config.git)
+   cd My-Config
