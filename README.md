@@ -22,8 +22,18 @@ Personal dotfiles for Hyprland configuration.
 | Theme        | Catppuccin   |
 
 
-## 🚀 Here
+## 🚀 Installation
 1. **Clone the repo:**
    ```bash
    git clone https://github.com/Mr-hero1/My-Dotfiles.git
-   cd My-Config
+   cd My-Dotfiles
+   
+## 🤓 References & Themes
+- Fausto-Korpsvart / Catppuccin GTK Theme  
+  - URL: https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme  
+
+- catppuccin / qtcreator  
+  - URL: https://github.com/catppuccin/qtcreator  
+
+- eww configuration docs (official)  
+  - URL: https://elkowar.github.io/eww/configuration.html
