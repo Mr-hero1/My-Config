@@ -2,12 +2,12 @@
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="Preview/2025-12-31-151346_hyprshot.png" width="45%" />
-  <img src="Preview/2026-01-03_16:22:16.png" width="45%" />
+  <img src="Preview/preview(1).png" width="45%" />
+  <img src="Preview/preview(2).png" width="45%" />
 </p>
 <p align="center">
-  <img src="Preview/2026-01-01-223632_hyprshot.png" width="45%" />
-  <img src="Preview/2025-12-31-151622_hyprshot.png" width="45%" />
+  <img src="Preview/preview(3).png" width="45%" />
+  <img src="Preview/preview(4).png" width="45%" />
 </p>
 
 ## 🛠 Details
