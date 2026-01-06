@@ -1,4 +1,4 @@
-# 🐧 [Ice-day Rice]
+# 🐧 [Icy Rice]
 
 ## 📸 Screenshots
 <p align="center">
