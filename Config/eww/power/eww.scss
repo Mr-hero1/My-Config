@@ -1,0 +1,75 @@
+// Catppuccin Mocha Colors with Alpha support
+$bg-blur: rgba(30, 30, 46, 0.5);
+$mantle: rgba(0, 0, 0, 0);   // 70% opacity
+$surface0: rgba(0, 0, 0, 0); // 60% opacity
+$crust: #11111b;
+$text: #ffffff;
+$subtext: #a6adc8;
+$mauve: #cba6f7;
+$red: #f38ba8;
+$peach: #fab387;
+$blue: #89b4fa;
+$yellow: #f9e2af;
+$green:  #a6e3a1;
+$teal:   #94e2d5;
+
+* {
+  all: unset;
+  font-family: "Hack Nerd Font";
+  font-weight: bold;
+}
+
+window {
+  background: $bg-blur;
+  border-radius:  0px;
+  border: 2px solid #ffffff;
+}
+
+.powermenu-frame {
+  background-color: $mantle;
+  padding: 4px 10px; 
+}
+
+.power-btn {
+  background-color: $surface0;
+  color: $text;
+  border-radius: 8px; 
+  padding: 6px 15px;  
+  margin: 4px 5px;    
+  transition: all 300ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  
+
+  .text {
+    font-size: 0.95rem; // Slightly smaller font
+    margin-left: 10px;  // This adds the space you wanted between icon and text
+    color: $text;
+  }
+
+  &:hover {
+    border-radius: 1px;
+    background-color: $mauve;
+    .text { color: $crust; }
+  }
+
+  // focus States
+  &:focus {
+    background-color: $mauve;
+    .text { color: $crust; }
+  }
+  
+  &.back:hover      { background-color: $subtext; }
+  &.lock:hover      { background-color: $blue; }
+  &.hibernate:hover { background-color: $yellow; }
+  &.logout:hover    { background-color: $mauve; }
+  &.shutdown:hover  { background-color: $red; }
+  &.suspend:hover   { background-color: $teal; }
+  &.reboot:hover    { background-color: $peach; }
+
+  &.back:focus      { background-color: $subtext; }
+  &.lock:focus      { background-color: $blue; }
+  &.hibernate:focus { background-color: $yellow; }
+  &.logout:focus    { background-color: $mauve; }
+  &.shutdown:focus  { background-color: $red; }
+  &.suspend:focus   { background-color: $teal; }
+  &.reboot:focus    { background-color: $peach; }
+}

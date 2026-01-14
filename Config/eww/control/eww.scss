@@ -1,0 +1,66 @@
+/* --- VARIABLES (Theme Configuration) --- */
+$bg-off: null; /*off none*/
+$bg-blur: rgba(30, 30, 46, 0.7);
+$bg-color: #1e1e2e;           /* Dark Background */
+$fg-color: #cdd6f4;           /* Main Text */
+$accent-color: #89b4fa;       /* Blue Accent (Clock/Highlight) */
+$secondary-color: #a6e3a1;    /* Green Accent (Date) */
+$muted-color: #6c7086;        /* Grey Text */
+$hover-bg: rgba(255, 255, 255, 0.1);
+$border-radius: 24px;
+
+/* --- GLOBAL RESET --- */
+* {
+  all: unset; /* Remove default GTK styling */
+  font-family: "Hack Nerd Font";
+  font-weight: bold;
+}
+
+.main-container {
+  background-color: $bg-blur;
+  border: 2px solid $fg-color;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  // This makes the background blur behind the window (compositor required)
+}
+
+.time-container {
+  font-family: "Hack Nerd Font";
+  font-size:   50px;
+  font-weight: bold;
+  color:       #ffffff;
+  padding-top: 4px;
+  padding-right: 8px;
+  -webkit-text-stroke: 0px #F4DEB7;
+}
+
+.music-container {
+  background-color: $hover-bg;
+  border-radius: 20px;
+  padding-right: 15px;
+}
+
+/* --- Shortut Button Styles --- */
+
+.app-btn {
+  border-radius: 16px;
+  padding: 10px;
+  transition: all 200ms ease-in-out;
+  border: 1px solid transparent;
+}
+
+/* HOVER STATE: The "Glow" */
+.app-btn:hover {
+  box-shadow: 0 0 15px 0px rgba(137, 180, 250, 0.4);
+}
+
+.app-btn:focus {
+  box-shadow: 0 0 15px 0px rgba(250, 137, 242, 0.4);
+}
+
+/* CLICK / FOCUS STATE: Intense Glow */
+.app-btn:active {
+  box-shadow: 0 0 25px 5px rgba(137, 180, 250, 0.6);
+  transition: all 50ms; /* Fast snap when clicking */
+}
