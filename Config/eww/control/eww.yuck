@@ -1,62 +1,43 @@
 ;; Variables
-(defpoll clock_time :interval "5m" "date +%H:")
-(defpoll clock_minute :interval "5s" "date +%M:")
+(defpoll clock_time :interval "20m" "date +%H:")
+(defpoll clock_minute :interval "20s" "date +%M:")
 (defpoll clock_sec :interval "1s" "date +%S")
-(defpoll clock_date :interval "10h" "date '+%d/%b'")
 
 (defpoll volume_percent :interval "1s" "pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+(?=%)' | head -1")
 (defpoll volume_muted :interval "1s" "pactl get-sink-mute @DEFAULT_SINK@ | grep -o 'yes' || echo 'no'")
 (defpoll brightness_percent :interval "1s" "brightnessctl -m | cut -d, -f4 | sed 's/%//'")
 
-;; Note: Changed path from ~/eww/mine/ to current ~/eww/Cc/
-(deflisten music_data :initial "" "modules/music.sh")
-(defpoll music_art :interval "2s" "modules/thum.sh")
-
 ;; Main Content Widget
 (defwidget box_content []
   (box :class "main-container" :orientation "h" :space-evenly false
     (box :class "center-section" :hexpand true
-      (box :class "triple-stack" :orientation "v" :spacing 15 :valign "center"
+      (box :class "triple-stack" :orientation "h" :spacing 15 :valign "center" :space-evenly false
         
         ;; Clock Section
         (box :class "time-container" :orientation "h" :space-evenly false :halign "center"
           (label :class "hour" :text "${clock_time}")
           (label :class "minute" :text "${clock_minute}")
-          (label :class "second" :text clock_sec)
-          (label :class "date" :text "-${clock_date}" :margin-left 10))
-          
-        ;; Music Player Section
-        (eventbox :onclick "modules/music.sh --toggle"
-                  :onrightclick "modules/music.sh --next"
-                  :cursor "pointer"
-                  :visible {music_data != "" && music_data?.title != ""}
-          (box :class "music-container" :orientation "h" :space-evenly true :spacing 50 :halign "center"
-            (box :class "music-art" :style "background-image: url('${music_art}');" :width 70 :height 70)
-            (box :orientation "v" :space-evenly false :valign "center"
-              (label :class "music-title" :halign "start" :limit-width 45 :text "${music_data?.status == 'Playing' ? '' : ''} ${music_data?.title ?: ''}")
-              (label :class "music-artist" :halign "start" :limit-width 45 :text "${music_data?.artist ?: ''}")
-              (label :class "music-album" :halign "start" :limit-width 45 :text "${music_data?.album ?: ''}"))))
-
+          (label :class "second" :text clock_sec))
+    
         ;; Shortcuts Section
         (box :class "shortcuts-row" :orientation "h" :spacing 12 :halign "center"
-          (shortcut :icon "browser.svg"  :action "helium-browser &")
-          (shortcut :icon "terminal.svg" :action "foot -D ~ &")
-          (shortcut :icon "files.svg"    :action "foot -D ~ yazi &")
-          (shortcut :icon "editor.svg"   :action "vscodium &")
-          (shortcut :icon "telegram.svg" :action "flatpak run io.github.kukuruzka165.materialgram/x86_64/stable &")
-          (shortcut :icon "music.svg"    :action "foot kew &") 
-          (shortcut :icon "inkscape.svg" :action "inkscape &") )))))
+          (shortcut :icon "browser.svg"  :action "helium-browser & disown")
+          (shortcut :icon "terminal.svg" :action "foot -D ~ & disown")
+          (shortcut :icon "files.svg"    :action "foot -D ~ yazi & disown")
+          (shortcut :icon "editor.svg"   :action "lite-xl & disown")
+          (shortcut :icon "telegram.svg" :action "flatpak run io.github.kukuruzka165.materialgram/x86_64/stable & disown")
+          (shortcut :icon "music.svg"    :action "foot kew & disown") 
+          (shortcut :icon "inkscape.svg" :action "inkscape & disown") )))))
 
 ;; Shortcut Widget Helper
 (defwidget shortcut [icon action]
-  (button :onclick action :class "app-btn" :cursor "pointer"
-    (image :path "icons/${icon}" :image-width 56 :image-height 56)))
+  (button :onclick "${action} & eww -c ~/.config/eww/control close box" :class "app-btn"
+    (image :path "icons/${icon}" :image-width 39 :image-height 39)))
 
 ;; Window Definition
 (defwindow box
   :monitor 0
-  :stacking "fg"
+  :stacking "overlay"
   :focusable true
-  :geometry (geometry :x "0px" :y "0px" :width "55%" :height "25%" :anchor "center")
-  (eventbox :onhoverlost "eww -c ~/.config/eww/control close box"
-    (box_content)))
+  :geometry (geometry :x "0px" :y "0px" :width "0%" :height "11%" :anchor "center")
+    (box_content))

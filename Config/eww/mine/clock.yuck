@@ -1,12 +1,10 @@
 (defwidget clock []
-    (overlay :orientation "h"
-      :spacing 0
-      (box :class "clock-label" :space-evenly "false" :orientation "h" :spacing "3" :valign "center" :halign  "end"  
+    (box :class "clock-label" :space-evenly "false" :orientation "h" :spacing "3" :valign "center" :halign  "end"  
       (label :text clock_time )
       (label :text clock_minute )
       (label :text clock_sec )
       (label :text "-" )
-      (label :text clock_date ))))
+      (label :text clock_date )))
 
 ;; Poll definitions must be outside the widget definition
 (defpoll clock_time :interval "5m" "date +%H:")

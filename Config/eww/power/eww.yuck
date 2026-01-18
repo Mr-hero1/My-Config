@@ -2,7 +2,7 @@
   (box :class "powermenu-frame" :orientation "v" :space-evenly false
 
 ;; Main Buttons
-(box :class "powermenu-body" :orientation "h" :spacing 16 :halign "center" :vlighn "center"
+(box :class "powermenu-body" :orientation "h" :spacing 22 :halign "center" :vlighn "center"
   
   (button :class "power-btn back" :onclick "eww -c ~/.config/eww/power close powermenu" 
     (box :orientation "h" :space-evenly false :spacing 12
@@ -50,6 +50,6 @@
   :windowtype "normal"
   :wm-ignore false
   :focusable true
-  :geometry (geometry :y "22px" :width "100%" :height "60px" :anchor "center top")
+  :geometry (geometry :y "22px" :width "100%" :height "10px" :anchor "center top")
   (eventbox :onhoverlost "eww -c ~/.config/eww/power close powermenu"
     (powermenu_layout)))
